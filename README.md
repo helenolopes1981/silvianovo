@@ -1,11 +1,25 @@
-<div align="center">
+# Sílvia Banda Enigma - Landing Page
 
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+Landing page institucional e portfólio para a musicista Sílvia Banda Enigma.
 
-  <h1>Built with AI Studio</h2>
+## Tecnologias
+- React 18
+- TypeScript
+- Vite
+- Tailwind CSS
+- Framer Motion (Motion)
 
-  <p>The fastest path from prompt to production with Gemini.</p>
+## Instalação
+```bash
+npm install
+```
 
-  <a href="https://aistudio.google.com/apps">Start building</a>
+## Desenvolvimento
+```bash
+npm run dev
+```
 
-</div>
+## Build
+```bash
+npm run build
+```

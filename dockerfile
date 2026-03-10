@@ -9,7 +9,8 @@ WORKDIR /app
 # Copiar arquivos de dependência
 COPY package*.json ./
 
-# Instalar dependências
+# IMPORTANTE: Usar npm install em vez de npm ci para evitar
+# necessidade de package-lock.json no repositório
 RUN npm install
 
 # Copiar código fonte
@@ -21,12 +22,9 @@ RUN npm run build
 # Stage 2: Serve with Nginx
 FROM nginx:alpine
 
-# Copiar build do stage anterior
 COPY --from=build /app/dist /usr/share/nginx/html
-
-# Configuração otimizada para SPA
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 
-EXPOSE 3000
+EXPOSE 80
 
 CMD ["nginx", "-g", "daemon off;"]
